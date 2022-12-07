@@ -1,14 +1,14 @@
 public class Book {
-    private String title;
-    private String authorName;
-    private String publisher;
-    private int pageCount;
-    private double price;
-    private int discount;
+    public String title;
+    public Author author;
+    public String publisher;
+    public int pageCount;
+    public double price;
+    public int discount;
 
-    public Book(String title, String authorName, String publisher, int pageCount) {
+    public Book(String title, Author author, String publisher, int pageCount) {
         this.title = title;
-        this.authorName = authorName;
+        this.author = author;
         this.publisher = publisher;
         this.pageCount = pageCount;
     }
@@ -26,7 +26,7 @@ public class Book {
     }
 
     public String toString() {
-        String str = "[ \n\t" + this.title + ",\n\t" + this.authorName + ",\n\t" + this.publisher + ",\n\t" + this.pageCount + "\n]";
+        String str = "[ \n\t" + this.title + ",\n\t" + this.author.name + ",\n\t" + this.publisher + ",\n\t" + this.pageCount + "\n]";
         return str;
     }
 }
